@@ -1,0 +1,23 @@
+/* Apply these styles on devices from 650px wide */
+@media only screen and (min-width: 650px) {
+  #main-container {
+    grid-template-areas:
+      "n n n n n m m m m m m m" /* Make the navbar move to the left */
+  }
+
+  #content {
+    overflow: visible;
+    height: auto;
+  }
+
+  #navbar {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    border-right: 1px solid #cacaca;
+  }
+
+  header h1, p {
+    text-align: left;
+  }
+}
