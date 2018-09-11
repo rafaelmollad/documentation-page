@@ -1,0 +1,95 @@
+/* Basic styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove styles applied by the browser */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+code {
+  background: gold;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: 'Raleway';
+  font-size: 0.9em;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Align all the h1 and p to the center */
+header h1, p {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+}
+
+/* Container for all the content in the document */
+#main-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);  /* Creates 12-column grid */
+  grid-template-areas:
+    "n n n n n n n n n n n n"
+    "m m m m m m m m m m m m"
+}
+
+/* Container for the different sections */
+#main-doc {
+  grid-area: m;
+  padding: 40px;
+}
+
+.main-section {
+  display: grid;
+  justify-items: center;
+}
+
+/* Main navigation container */
+#navbar {
+  grid-area: n;
+}
+
+/* JS documentation heading */
+#navbar h1 {
+  text-align: center;
+}
+
+/* Container for the table of contents */
+#content {
+  display: grid;
+  justify-items: stretch;
+  text-align: center;
+  height: 100px;
+  overflow: auto;
+}
+
+/* Links to each section in the document */
+#content a {
+  padding: 20px 0;
+  border-bottom: 1px solid #cacaca;
+  font-family: 'Comfortaa';
+  color: limegreen;
+  font-size: 1.1em;
+}
+
+/* Selects first link - Introduction*/
+#content a:first-of-type {
+  border-top: 1px solid #cacaca;
+}
